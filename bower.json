@@ -1,0 +1,28 @@
+{
+  "name": "trabalhoFinal",
+  "authors": [
+    "luan-s <luanjs.if@gmail.com>"
+  ],
+  "description": "Meu trabalho final",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Trabalho",
+    "final",
+    "futebol",
+    "noticia",
+    "social"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "~0.4.2"
+  }
+}

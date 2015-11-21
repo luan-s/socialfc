@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Social FC</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/material.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid"></div>
+      <!-- Brand and toggle get grouped for better mobile display-->
+      <div class="navbar-header"></div>
+    </nav>
+    <div class="content col-md-12 col-xs-12">
+      <div class="jumbotron pesquisa col-md-12 col-xs-12">
+        <h1>Bem vindo ao Social Fc!</h1>
+        <p>Nome do time:</p>
+        <div class="time com-md-4 col-xs-4 col-md-offset-4 col-xs-offset-4">
+          <input type="text" placeholder="Ex: Corinthians" aria-describedby="basic-addon2" class="form-control">
+          <button id="ir" class="btn btn-default">Ir</button>
+        </div>
+      </div>
+      <div class="jumbotron social col-md-12 col-xs-12">
+        <ul class="nav nav-pills col-md-12 col-xs-12">
+          <li role="presentation" class="com-md-4 col-xs-4 active"><a href="#">Instagram</a></li>
+          <li role="presentation" class="com-md-4 col-xs-4"><a href="#">Facebook</a></li>
+          <li role="presentation" class="com-md-4 col-xs-4"><a href="#">Twitter</a></li>
+        </ul>
+        <p>Nome do time:</p>
+        <div id="instafeed" class="instafeed"></div>
+      </div>
+    </div>
+    <script src="bower_components/instafeed.js/instafeed.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

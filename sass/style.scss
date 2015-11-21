@@ -1,0 +1,46 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+.border{
+	border: 1px solid black;
+}
+
+body{
+	background-image: url("../img/fundo.jpg");
+	width: 100%;
+	height: 100vh;
+}
+
+nav{
+	height: 70px;
+}
+.content{
+	text-align: center;
+	.pesquisa{
+		.time{
+			input{
+				transition: all 0.3s linear;
+				padding-left:20px;
+			}
+		}
+		transition: all 0.3s linear;
+		padding: 150px 0;
+		height: 85vh;
+		h1{
+		}
+	}
+	.social{
+		background-color: #CFD8DC;
+		display:none;
+		height: auto;
+		.nav-pills{
+			li{
+				margin:0;
+			}
+		}
+	}
+	
+}
+
