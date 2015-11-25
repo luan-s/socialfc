@@ -49,6 +49,15 @@ function testAPI() {
     console.log('Successful login for: ' + response.name);
     
   });
+
+  FB.api(
+  "/132769576762243/feed",
+  function (response) {
+    if (response && !response.error) {
+      console.log(response);
+      /* handle the result */
+  }
+});
 }
 
 $('#login').click(function(){
@@ -56,4 +65,4 @@ $('#login').click(function(){
   FB.login(function(response){
     statusChangeCallback(response);
   });
-});
+
