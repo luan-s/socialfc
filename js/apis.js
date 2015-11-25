@@ -76,4 +76,4 @@ $('#login').click(function(){
 });
 
 
-
+console.log("logout");
