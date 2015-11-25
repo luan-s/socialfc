@@ -69,10 +69,10 @@ $('.login').click(function(){
 
 $('.logout').click(function(){
   console.log("oi")
-  FB.logOut(function(response){
+  FB.logout(function(response){
     statusChangeCallback(response);
   });
 });
 
 
-console.log("logout 9");
+console.log("logout 8");
