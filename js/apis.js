@@ -50,7 +50,7 @@ function testAPI() {
   });
 
   FB.api(
-  "/132769576762243/feed",
+  "/132769576762243/posts",
   function (response) {
     if (response && !response.error) {
       console.log(response);
@@ -76,4 +76,4 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 2");
+console.log("logout 7");
