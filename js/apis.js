@@ -65,4 +65,5 @@ $('#login').click(function(){
   FB.login(function(response){
     statusChangeCallback(response);
   });
+}
 
