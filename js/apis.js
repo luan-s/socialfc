@@ -68,11 +68,12 @@ $('.login').click(function(){
 
 
 $('.logout').click(function(){
-  console.log("oi")
+  $(".login").show();
   FB.logout(function(response){
     statusChangeCallback(response);
   });
+
 });
 
 
-console.log("logout 8");
+console.log("logout 5");
