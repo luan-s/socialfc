@@ -4,7 +4,7 @@ function statusChangeCallback(response) {
   console.log('statusChangeCallback');
   console.log(response);
   if (response.status === 'connected') {
-    $(".login").hide();
+    $(".login").test(Logout);
     testAPI();
   } else if (response.status === 'not_authorized') {
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -66,4 +66,14 @@ $('#login').click(function(){
     statusChangeCallback(response);
   });
 });
+
+
+$('#login').click(function(){
+  console.log("oi")
+  FB.logout(function(response){
+    statusChangeCallback(response);
+  });
+});
+
+
 
