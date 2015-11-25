@@ -4,7 +4,15 @@ function statusChangeCallback(response) {
   console.log('statusChangeCallback');
   console.log(response);
   if (response.status === 'connected') {
-    $(".login").test(Logout);
+    $(".login").text("Logout");
+
+    if($(".login").hasClass("login")){
+      $(".login").addClass("logout");
+    }else{
+      $(".logout").addClass("login");
+    }
+
+
     testAPI();
   } else if (response.status === 'not_authorized') {
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -60,7 +68,7 @@ function testAPI() {
 });
 }
 
-$('#login').click(function(){
+$('.login').click(function(){
   console.log("oi")
   FB.login(function(response){
     statusChangeCallback(response);
@@ -68,12 +76,12 @@ $('#login').click(function(){
 });
 
 
-$('#login').click(function(){
+$('.logout').click(function(){
   console.log("oi")
-  FB.logout(function(response){
+  FB.logOut(function(response){
     statusChangeCallback(response);
   });
 });
 
 
-console.log("logout");
+console.log("logout1");
