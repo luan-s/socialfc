@@ -13,29 +13,50 @@
       <!-- Brand and toggle get grouped for better mobile display-->
       <div class="navbar-header"></div>
     </nav>
-    <div class="content col-md-12 col-xs-12">
+    <div class="content col-xs-12">
       <div class="jumbotron pesquisa col-md-12 col-xs-12">
         <h1>Bem vindo ao Social Fc!</h1>
         <p>Nome do time:</p>
-        <div class="time com-md-4 col-xs-4 col-md-offset-4 col-xs-offset-4">
+        <div class="time col-xs-4 col-xs-offset-4">
           <input type="text" placeholder="Ex: Corinthians" aria-describedby="basic-addon2" class="form-control">
           <button id="ir" class="btn btn-default">Ir</button>
         </div>
       </div>
-      <div class="jumbotron social col-md-12 col-xs-12">
-        <ul class="nav nav-pills col-md-12 col-xs-12">
-          <li role="presentation" class="com-md-4 col-xs-4 active"><a href="#">Instagram</a></li>
-          <li role="presentation" class="com-md-4 col-xs-4"><a href="#">Facebook</a></li>
-          <li role="presentation" class="com-md-4 col-xs-4"><a href="#">Twitter</a></li>
+      <div class="jumbotron social col-xs-12">
+        <ul class="nav nav-pills col-xs-12">
+          <li role="presentation" data-s="instagram" class="col-xs-4 active"><a href="#">Instagram</a></li>
+          <li role="presentation" data-s="facebook" class="col-xs-4"><a href="#">Facebook</a></li>
+          <li role="presentation" data-s="twitter" class="col-xs-4"><a href="#">Twitter</a></li>
         </ul>
         <p>Nome do time:</p>
-        <div id="instafeed" class="instafeed"></div>
+        <div class="jumbotron so-pane instagram col-xs-8 col-xs-offset-2 hidden">Instagram</div>
+        <div class="jumbotron so-pane facebook col-xs-8 col-xs-offset-2 hidden"> <a href="javascript:void(0)" id="login" class="btn btn-raised btn-info login">Logar</a></div>
+        <div class="jumbotron so-pane twitter col-xs-8 col-xs-offset-2 hidden">Twitter</div>
+      </div>
+      <div class="painel-noticias col-xs-12">
+        <div class="pane col-xs-4">
+          <div class="jumbotron noticias n1">
+            <h1>Globo</h1>
+          </div>
+        </div>
+        <div class="pane col-xs-4">
+          <div class="jumbotron noticias n2">
+            <h1>UOL</h1>
+          </div>
+        </div>
+        <div class="pane col-xs-4">
+          <div class="jumbotron noticias n3">
+            <h1>Outro</h1>
+          </div>
+        </div>
       </div>
     </div>
     <script src="bower_components/instafeed.js/instafeed.min.js"></script>
+    <script src="bower_components/abdmob/x2js/xml2json.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/apis.js"></script>
   </body>
 </html>
