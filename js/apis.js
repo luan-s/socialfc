@@ -4,22 +4,13 @@ function statusChangeCallback(response) {
   console.log('statusChangeCallback');
   console.log(response);
   if (response.status === 'connected') {
-    $(".login").text("Logout");
-
-    if($(".login").hasClass("login")){
-      $(".login").addClass("logout");
-    }else{
-      $(".logout").addClass("login");
-    }
-
-
+    $(".login").hide();
     testAPI();
   } else if (response.status === 'not_authorized') {
     document.getElementById('status').innerHTML = 'Please log ' +
       'into this app.';
   } else {
-    document.getElementById('status').innerHTML = 'Please log ' +
-      'into Facebook.';
+    $(".logout").hide();
   }
 }
 
@@ -84,4 +75,4 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout1");
+console.log("logout 9");
