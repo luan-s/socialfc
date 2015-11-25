@@ -61,6 +61,7 @@ function testAPI() {
 
 $('.login').click(function(){
   $(".logout").show();
+  $(".login").hide();
    FB.login(function(response){
     statusChangeCallback(response);
   });
@@ -69,6 +70,7 @@ $('.login').click(function(){
 
 $('.logout').click(function(){
   $(".login").show();
+  $(".logout").hide();
   FB.logout(function(response){
     statusChangeCallback(response);
   });
@@ -76,4 +78,4 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 7");
+console.log("logout 10");
