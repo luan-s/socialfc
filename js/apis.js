@@ -78,4 +78,4 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 10");
+console.log("logout 11");
