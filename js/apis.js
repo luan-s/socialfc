@@ -81,8 +81,6 @@ function testAPI() {
     for(var i = 0; i<5;i++){
       
          var image = separaId(response.data[i].id);
-         console.log(image);
-     
       div1 = document.createElement("div");
       div1.className = "panel panel-primary";
 
@@ -98,7 +96,9 @@ function testAPI() {
 
       img = document.createElement('img');
       img.className = "facePhotos";
+      console.log("ola");
       img.src = image;
+      console.log(oi);
 
       div2.appendChild(h1);
       div2.appendChild(div3).appendChild(img);
