@@ -79,7 +79,13 @@ function testAPI() {
     
 
     for(var i = 0; i<5;i++){
-      var image = separaId(response.data[2].id);
+      try{
+        var image = separaId(response.data[2].id);
+      }
+      catch(er){
+        image = 'https://s-media-cache-ak0.pinimg.com/736x/7e/e2/94/7ee2946366b56b09bf9c93008e907084.jpg'
+      }
+      
       div1 = document.createElement("div");
       div1.className = "panel panel-primary";
 
@@ -131,7 +137,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 56");
+console.log("logout 10");
 
 /////////// INSTAGRAM ///////////
 
