@@ -120,7 +120,7 @@ var instagram = function() {
           for(var i = 0; data.data.length;i++){
             console.log(data.data[i].images.low_resolution.url)
           }
-          $("#instagram").append('<div class="panel panel-primary">'+
+          $(".instagram").append('<div class="panel panel-primary">'+
               '<div class="panel-heading">'+
                 '<h3 class="panel-title">Panel primary</h3>'+
               '</div>'+
@@ -128,7 +128,8 @@ var instagram = function() {
                 'Panel content'+
               '</div>'+
             '</div> '
-           )
+           );
+           $(".instagram").text("Oi");
           
         }
         
