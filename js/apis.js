@@ -18,7 +18,7 @@ function separaId(id){
 
     if(id[i]=='_') x = 1;
   }
-  aux = httpGet('https://graph.facebook.com/'+aux+'/picture');
+  aux = 'https://graph.facebook.com/'+aux+'/picture';
   return aux;
 }
 
@@ -73,7 +73,12 @@ function testAPI() {
   FB.api(
   "/132769576762243/posts",
   function (response) {
-    console.log(separaId(response.data[0].id));
+    var image = (separaId(response.data[0].id));
+
+    $(".instaPohtos").attr("src",image);
+
+
+
     if (response && !response.error) {
       console.log(response);
       /* handle the result */
@@ -100,7 +105,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 11");
+console.log("logout 12");
 
 /////////// INSTAGRAM ///////////
 
