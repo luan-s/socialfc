@@ -78,7 +78,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 1*");
+console.log("logout 11");
 
 /////////// INSTAGRAM ///////////
 
@@ -107,6 +107,7 @@ var instagram = function() {
       });
     },
     loadImages: function(userID) {
+      console.log(userID);
       var getImagesURL = 'https://api.instagram.com/v1/users/'+ userID +'/media/recent/?access_token='+ accessToken;
       $.ajax({
         type: "GET",
