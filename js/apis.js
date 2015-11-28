@@ -18,6 +18,7 @@ function separaId(id){
 
     if(id[i]=='_') x = 1;
   }
+  aux = httpGet('https://graph.facebook.com/'+aux+'/picture');
   return aux;
 }
 
@@ -51,9 +52,6 @@ window.fbAsyncInit = function() {
               // the session
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.5' // use version 2.2
-
-
-
   });
 
   FB.getLoginStatus(function(response) {
@@ -102,7 +100,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 89");
+console.log("logout 10");
 
 /////////// INSTAGRAM ///////////
 
