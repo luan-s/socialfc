@@ -96,8 +96,6 @@ function testAPI() {
       img = document.createElement('img');
       img.className = "facePhotos";
       img.src = image;
-      img.height = "100px";
-      img.width = "100px";
 
       div2.appendChild(h1);
       div2.appendChild(div3).appendChild(img);
@@ -133,7 +131,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 2");
+console.log("logout 21");
 
 /////////// INSTAGRAM ///////////
 
