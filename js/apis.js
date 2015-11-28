@@ -84,7 +84,7 @@ function testAPI() {
       div2.className = "panel-heading";
 
       h1 = document.createElement("h1");
-      h1.textContent = "♥ " + response.data[i].likes.count.toString();
+      h1.textContent = "♥ ";
       h1.className = "panel-title";
 
       div3 = document.createElement("div");
