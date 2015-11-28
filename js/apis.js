@@ -131,7 +131,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 20");
+console.log("logout 56");
 
 /////////// INSTAGRAM ///////////
 

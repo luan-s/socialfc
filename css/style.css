@@ -32,4 +32,9 @@ nav {
 .pane {
   padding: 0 20px; }
 
+.instaPhotos, .facePhotos {
+  overflow: hidden;
+  width: 100px !important;
+  height: 100px !important; }
+
 /*# sourceMappingURL=style.css.map */
