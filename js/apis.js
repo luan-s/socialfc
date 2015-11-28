@@ -78,11 +78,11 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 20");
+console.log("logout 0");
 
 /////////// INSTAGRAM ///////////
 
-instagram = document.querySelector(".instagram");
+insta = document.querySelector(".instagram");
 
 
 var accessToken = '246134358.5b9e1e6.4b4fa7dc216046798d313db2e45feb49';
@@ -139,7 +139,7 @@ var instagram = function() {
           div2.appendChild(h1);
           div2.appendChild(div3);
           div1.appendChild(div2);
-          instagram.appendChild(div1);
+          insta.appendChild(div1);
         }
          }
         
