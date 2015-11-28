@@ -26,8 +26,10 @@ function separaId(id){
 function checkImagem(url) {
     var img = '<img src="'+ url +'" />';
     $(img).load(function() {
+      console.log("existe");
       return 1;
     }).bind('error', function() {
+      console.log("nao existe");
       return 0;
     });
    }
@@ -151,7 +153,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 0");
+console.log("logout 03");
 
 /////////// INSTAGRAM ///////////
 
