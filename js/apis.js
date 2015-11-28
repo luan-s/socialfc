@@ -78,7 +78,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 13");
+console.log("logout 25");
 
 /////////// INSTAGRAM ///////////
 
@@ -139,7 +139,7 @@ var instagram = function() {
             img.src = data.data[i].images.low_resolution.url;
 
             div2.appendChild(h1);
-            div2.appendChild(div3);
+            div2.appendChild(div3).appendChild(img);
             div1.appendChild(div2);
             insta.appendChild(div1);
         }
