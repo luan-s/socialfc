@@ -97,7 +97,6 @@ function testAPI() {
 
       img = document.createElement('img');
       img.className = "facePhotos";
-      console.log("ola");
       img.src = image;
       
 
@@ -105,7 +104,10 @@ function testAPI() {
       div2.appendChild(div3).appendChild(img);
       div1.appendChild(div2);
       face.appendChild(div1);
-      console.log('oi');
+
+      $('.facePhoto').error(function(){
+              $('#evo').attr('src','https://s-media-cache-ak0.pinimg.com/736x/7e/e2/94/7ee2946366b56b09bf9c93008e907084.jpg');
+      });
     }
 
 
@@ -136,7 +138,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 779");
+console.log("logout 79");
 
 /////////// INSTAGRAM ///////////
 
@@ -200,6 +202,8 @@ var instagram = function() {
             div2.appendChild(div3).appendChild(img);
             div1.appendChild(div2);
             insta.appendChild(div1);
+
+
            }
          }
         
