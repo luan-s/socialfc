@@ -106,7 +106,7 @@ function testAPI() {
       face.appendChild(div1);
 
       $('.facePhotos').error(function(){
-             $('#evo').attr('src','https://s-media-cache-ak0.pinimg.com/736x/7e/e2/94/7ee2946366b56b09bf9c93008e907084.jpg');
+             $('.facePhotos').attr('src','https://s-media-cache-ak0.pinimg.com/736x/7e/e2/94/7ee2946366b56b09bf9c93008e907084.jpg');
       });
     }
 
@@ -138,7 +138,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 77");
+console.log("logout 7");
 
 /////////// INSTAGRAM ///////////
 
