@@ -80,7 +80,7 @@ function testAPI() {
 
     for(var i = 0; i<5;i++){
       try{
-        var image = separaId(response.data[2].id);
+        var image = separaId(response.data[i].id);
       }
       catch(er){
         image = 'https://s-media-cache-ak0.pinimg.com/736x/7e/e2/94/7ee2946366b56b09bf9c93008e907084.jpg'
@@ -137,7 +137,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 10");
+console.log("logout 14");
 
 /////////// INSTAGRAM ///////////
 
