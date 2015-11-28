@@ -68,7 +68,6 @@ function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
  
   FB.api('/me', function(response) {
-    console.log(JSON.stringify(response));
     console.log('Successful login for: ' + response.name);
     
   });
@@ -76,6 +75,7 @@ function testAPI() {
   FB.api(
   "/132769576762243/posts",
   function (response) {
+    console.log(separaId(response.data[0].id));
     if (response && !response.error) {
       console.log(response);
       /* handle the result */
@@ -102,7 +102,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 41");
+console.log("logout 89");
 
 /////////// INSTAGRAM ///////////
 
