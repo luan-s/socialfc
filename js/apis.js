@@ -107,7 +107,6 @@ var instagram = function() {
       });
     },
     loadImages: function(userID) {
-      console.log(userID);
       console.log('https://api.instagram.com/v1/users/'+ userID +'/media/recent/?access_token='+ accessToken);
       var getImagesURL = 'https://api.instagram.com/v1/users/'+ userID +'/media/recent/?access_token='+ accessToken;
       $.ajax({
@@ -116,15 +115,7 @@ var instagram = function() {
         cache: false,
         url: getImagesURL,
         success: function(data) {
-          for(var i = 0; i < limit; i+=1) {
-            if(setSize == "small") {
-              var size = data.data[i].images.thumbnail.url;
-            } else if(setSize == "medium") {
-              var size = data.data[i].images.low_resolution.url;
-            } else {
-              var size = data.data[i].images.standard_resolution.url; 
-            }
-            $("#instagram").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + size +"'/></a>");
+          console.log(data);
           }
         }
       });
