@@ -248,11 +248,11 @@ window.twttr = (function(d, s, id) {
   return t;
 }(document, "script", "twitter-wjs"));
 
-twttr.widgets.createTimeline (
+twttr.widgets.createTimeline(
   "600720083413962752",
   document.querySelector(".twitter"),
   {
-    Nome de tela: "tecido"
+    screenName: "fabric"
   }
 );
 
