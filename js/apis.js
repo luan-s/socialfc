@@ -26,9 +26,9 @@ function separaId(id){
 function checkImagem(url) {
     var img = '<img src="'+ url +'" />';
     $(img).load(function() {
-      console.log('imagem: '+url+' existe');
+      return 1;
     }).bind('error', function() {
-      console.log('imagem: '+url+' não existe');
+      return 0;
     });
    }
 
@@ -90,10 +90,11 @@ function testAPI() {
 
     for(var i = 0; i<5;i++){
       
-          var image = separaId(response.data[i].id);
-          checkImagem(image);
-
-          
+      var image = separaId(response.data[i].id);
+      if(checkImagem(image))
+         var image = separaId(response.data[i].id);
+      else
+         image = 'https://s-media-cache-ak0.pinimg.com/736x/7e/e2/94/7ee2946366b56b09bf9c93008e907084.jpg';
 
       div1 = document.createElement("div");
       div1.className = "panel panel-primary";
@@ -150,7 +151,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 6");
+console.log("logout 0");
 
 /////////// INSTAGRAM ///////////
 
