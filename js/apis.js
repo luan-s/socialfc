@@ -73,9 +73,10 @@ function testAPI() {
   FB.api(
   "/132769576762243/posts",
   function (response) {
-    var image = (separaId(response.data[0].id));
+    var image = separaId(response.data[0].id);
 
-    $(".instaPohtos").attr("src",image);
+    $(".instaPhtos").attr("src",image);
+    console.log((".instaPhotos").attr("src"));
 
 
 
@@ -105,7 +106,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 12");
+console.log("logout 15");
 
 /////////// INSTAGRAM ///////////
 
