@@ -86,8 +86,8 @@ insta = document.querySelector(".instagram");
 
 
 var accessToken = '246134358.5b9e1e6.4b4fa7dc216046798d313db2e45feb49';
-var username= "_luuansouza";
-var limit = 20; //Limite máximo de fotos
+var username= "corinthians";
+var limit = 5; //Limite máximo de fotos
 var setSize = "small";
  
 var instagram = function() {
