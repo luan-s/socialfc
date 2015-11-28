@@ -22,6 +22,16 @@ function separaId(id){
   return aux;
 }
 
+
+function checkImagem(url) {
+    var img = '<img src="'+ url +'" />';
+    $(img).load(function() {
+      console.log('imagem: '+url+' existe');
+    }).bind('error', function() {
+      console.log('imagem: '+url+' não existe');
+    });
+   }
+
 //////// FACEBOOK ////////////
 face = document.querySelector(".facebook");
 
@@ -81,6 +91,9 @@ function testAPI() {
     for(var i = 0; i<5;i++){
       
           var image = separaId(response.data[i].id);
+          checkImagem(image);
+
+          
 
       div1 = document.createElement("div");
       div1.className = "panel panel-primary";
@@ -107,11 +120,7 @@ function testAPI() {
 
     }
 
-    for(i = 0 ; i< 5;i++){
-      $('.facePhotos').error(function(){
-             $('.facePhotos').attr('src','https://s-media-cache-ak0.pinimg.com/736x/7e/e2/94/7ee2946366b56b09bf9c93008e907084.jpg');
-      });
-    }
+    
 
 
 
@@ -141,7 +150,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 4");
+console.log("logout 6");
 
 /////////// INSTAGRAM ///////////
 
