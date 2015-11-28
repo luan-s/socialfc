@@ -98,12 +98,13 @@ function testAPI() {
       img.className = "facePhotos";
       console.log("ola");
       img.src = image;
-      console.log('oi');
+      
 
       div2.appendChild(h1);
       div2.appendChild(div3).appendChild(img);
       div1.appendChild(div2);
       face.appendChild(div1);
+      console.log('oi');
     }
 
 
@@ -134,7 +135,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 7");
+console.log("logout 77");
 
 /////////// INSTAGRAM ///////////
 
