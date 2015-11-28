@@ -227,5 +227,32 @@ $(document).ready(function() {
     instagram.init();
 });
 
+////////////TWITTER//////////////
 
+
+
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));
+
+twttr.widgets.createTimeline (
+  "600720083413962752",
+  document.querySelector(".twitter"),
+  {
+    Nome de tela: "tecido"
+  }
+);
 
