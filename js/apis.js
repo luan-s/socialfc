@@ -75,7 +75,7 @@ function testAPI() {
   function (response) {
     var image = separaId(response.data[0].id);
 
-    $(".instaPhtos").attr("src",image);
+    $(".instaPhotos").attr("src",image);
     console.log($(".instaPhotos").attr("src"));
 
 
@@ -106,7 +106,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 15");
+console.log("logout 25");
 
 /////////// INSTAGRAM ///////////
 
