@@ -22,6 +22,9 @@ function separaId(id){
   return aux;
 }
 
+//////// FACEBOOK ////////////
+face = document.querySelector(".facebook");
+
 
 function statusChangeCallback(response) {
   console.log('statusChangeCallback');
@@ -76,7 +79,7 @@ function testAPI() {
     
 
     for(var i = 0; i<5;i++){
-      var image = separaId(response.data[0].id);
+      var image = separaId(response.data[i].id);
       div1 = document.createElement("div");
       div1.className = "panel panel-primary";
 
@@ -93,11 +96,13 @@ function testAPI() {
       img = document.createElement('img');
       img.className = "facePhotos";
       img.src = image;
+      img.height = "100px";
+      img.width = "100px";
 
       div2.appendChild(h1);
       div2.appendChild(div3).appendChild(img);
       div1.appendChild(div2);
-      insta.appendChild(div1);
+      face.appendChild(div1);
     }
 
 
@@ -128,7 +133,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 25");
+console.log("logout 2");
 
 /////////// INSTAGRAM ///////////
 
