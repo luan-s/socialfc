@@ -1,5 +1,27 @@
 
 
+function httpGet(url) { 
+  var xmlHttp = new XMLHttpRequest(); 
+  xmlHttp.open( "GET", url, false ); // false para síncrono
+  xmlHttp.send( null ); 
+  return JSON.parse(xmlHttp.responseText);
+}
+
+
+function separaId(id){
+  aux = '';
+  x = 0;
+  for(var i = 0 ;id.length;i++){
+    if(x){
+      aux+=id[i];
+    }
+
+    if(id[i]=='_') x = 1;
+  }
+  return aux;
+}
+
+
 function statusChangeCallback(response) {
   console.log('statusChangeCallback');
   console.log(response);
@@ -31,6 +53,7 @@ window.fbAsyncInit = function() {
     version    : 'v2.5' // use version 2.2
 
 
+
   });
 
   FB.getLoginStatus(function(response) {
@@ -39,12 +62,14 @@ window.fbAsyncInit = function() {
 }
 
 
-
 function testAPI() {
+
+  // Pegar imagem https://graph.facebook.com/%7Bobject-id-from-feed%7D/picture
   console.log('Welcome!  Fetching your information.... ');
  
   FB.api('/me', function(response) {
     console.log(response);
+    console.log(separaId(response.data[0].id));
     console.log('Successful login for: ' + response.name);
     
   });
@@ -78,7 +103,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 62");
+console.log("logout 40");
 
 /////////// INSTAGRAM ///////////
 
