@@ -11,7 +11,7 @@ function httpGet(url) {
 function separaId(id){
   aux = '';
   x = 0;
-  for(var i = 0 ;id.length;i++){
+  for(var i = 0 ;i<id.length;i++){
     if(x){
       aux+=id[i];
     }
