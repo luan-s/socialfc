@@ -119,7 +119,7 @@ var instagram = function() {
         success: function(data) {
           console.log(data);
 
-          for(var i = 0; i<data.data.length;i++){
+          for(var i = 0; i<5;i++){
         
             div1 = document.createElement("div");
             div1.className = "panel panel-primary";
@@ -128,7 +128,7 @@ var instagram = function() {
             div2.className = "panel-heading";
 
             h1 = document.createElement("div");
-            h1.textContent = "Panel Primary";
+            h1.textContent = "♥ " + data.data.likes.count.toString();
             h1.className = "panel-title";
 
             div3 = document.createElement("div");
