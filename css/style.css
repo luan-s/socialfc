@@ -35,6 +35,6 @@ nav {
 .instaPhotos, .facePhotos {
   overflow: hidden;
   width: 250px !important;
-  height: 250px !important; }
+  height: auto !important; }
 
 /*# sourceMappingURL=style.css.map */
