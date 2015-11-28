@@ -116,8 +116,8 @@ var instagram = function() {
         url: getImagesURL,
         success: function(data) {
           console.log(data);
-          }
         }
+        
       });
     }
   }
