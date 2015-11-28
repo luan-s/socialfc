@@ -73,10 +73,32 @@ function testAPI() {
   FB.api(
   "/132769576762243/posts",
   function (response) {
-    var image = separaId(response.data[0].id);
+    
 
-    $(".instaPhotos").attr("src",image);
-    console.log($(".instaPhotos").attr("src"));
+    for(var i = 0; i<5;i++){
+      var image = separaId(response.data[0].id);
+      div1 = document.createElement("div");
+      div1.className = "panel panel-primary";
+
+      div2 = document.createElement("div");
+      div2.className = "panel-heading";
+
+      h1 = document.createElement("h1");
+      h1.textContent = "♥ " + response.data[i].likes.count.toString();
+      h1.className = "panel-title";
+
+      div3 = document.createElement("div");
+      div3.className = "panel-body";
+
+      img = document.createElement('img');
+      img.className = "facePhotos";
+      img.src = image;
+
+      div2.appendChild(h1);
+      div2.appendChild(div3).appendChild(img);
+      div1.appendChild(div2);
+      insta.appendChild(div1);
+    }
 
 
 
@@ -170,7 +192,7 @@ var instagram = function() {
             div2.appendChild(div3).appendChild(img);
             div1.appendChild(div2);
             insta.appendChild(div1);
-        }
+           }
          }
         
       });
