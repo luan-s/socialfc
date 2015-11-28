@@ -78,7 +78,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 25");
+console.log("logout 62");
 
 /////////// INSTAGRAM ///////////
 
@@ -128,7 +128,7 @@ var instagram = function() {
             div2.className = "panel-heading";
 
             h1 = document.createElement("div");
-            h1.textContent = "♥ " + data.data.likes.count.toString();
+            h1.textContent = "♥ " + data.data[i].likes.count.toString();
             h1.className = "panel-title";
 
             div3 = document.createElement("div");
