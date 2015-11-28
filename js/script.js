@@ -19,8 +19,8 @@ $(function () {
 		}
 	});
 });*/
-
-/*var i = 0;
+/*
+var i = 0;
 setInterval(function(){
 	$(".time > input").attr("placeholder","Ex: "+times[i++]);
 	if(i==times.length)i = 0;
@@ -33,8 +33,9 @@ var feed = new Instafeed ({
     clientId : '07fb82d2fea84e99bbe6bf0d1b3c7603',
 }); 
 feed.run(); 
-
 */
+
+
 
 times = ["Atletico Mineiro","Avai","Chapecoense","Corinthians","Coritiba","Cruzeiro","Figueirense","Flamengo","Fluminense","Goiais","Gremio","Internacional","joinville","Palmeiras","Santos","Sao Paulo","Sport", "Vasco"]
 $(".nav-pills > li").click(function(){

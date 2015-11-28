@@ -79,3 +79,60 @@ $('.logout').click(function(){
 
 
 console.log("logout 12");
+
+/////////// INSTAGRAM ///////////
+
+
+var accessToken = '246134358.5b9e1e6.4b4fa7dc216046798d313db2e45feb49';
+var username= "_luuansouza";
+var limit = 20; //Limite máximo de fotos
+var setSize = "small";
+ 
+var instagram = function() {
+  return {
+    init: function() {
+      instagram.getUser();
+    },
+    getUser: function() {
+      var getUserURL = 'https://api.instagram.com/v1/users/search?q='+ username +'&access_token='+ accessToken ;
+      $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: getUserURL,
+        success: function(data) {
+          var getUserID = data.data[0].id;
+          instagram.loadImages(getUserID);
+        } 
+      });
+    },
+    loadImages: function(userID) {
+      var getImagesURL = 'https://api.instagram.com/v1/users/'+ userID +'/media/recent/?access_token='+ accessToken;
+      $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: getImagesURL,
+        success: function(data) {
+          for(var i = 0; i < limit; i+=1) {
+            if(setSize == "small") {
+              var size = data.data[i].images.thumbnail.url;
+            } else if(setSize == "medium") {
+              var size = data.data[i].images.low_resolution.url;
+            } else {
+              var size = data.data[i].images.standard_resolution.url; 
+            }
+            $("#instagram").append("<li><a target='_blank' href='" + data.data[i].link +"'><img src='" + size +"'/></a>");
+          }
+        }
+      });
+    }
+  }
+}();
+ 
+$(document).ready(function() {
+    instagram.init();
+});
+
+
+
