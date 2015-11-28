@@ -98,7 +98,7 @@ function testAPI() {
       img.className = "facePhotos";
       console.log("ola");
       img.src = image;
-      console.log(oi);
+      console.log('oi');
 
       div2.appendChild(h1);
       div2.appendChild(div3).appendChild(img);
@@ -134,7 +134,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 8");
+console.log("logout 7");
 
 /////////// INSTAGRAM ///////////
 
