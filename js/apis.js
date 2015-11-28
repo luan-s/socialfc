@@ -76,7 +76,7 @@ function testAPI() {
     var image = separaId(response.data[0].id);
 
     $(".instaPhtos").attr("src",image);
-    console.log((".instaPhotos").attr("src"));
+    console.log($(".instaPhotos").attr("src"));
 
 
 
