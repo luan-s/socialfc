@@ -117,7 +117,7 @@ var instagram = function() {
         success: function(data) {
           console.log(data);
 
-          for(var i = 0; data.data.length-1;i++){
+          for(var i = 0; i<data.data.length;i++){
             console.log(data.data[i].images.low_resolution.url)
           }
           $(".instagram").append('<div class="panel panel-primary">'+
