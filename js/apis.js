@@ -78,9 +78,11 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 15");
+console.log("logout 20");
 
 /////////// INSTAGRAM ///////////
+
+instagram = document.querySelector(".instagram");
 
 
 var accessToken = '246134358.5b9e1e6.4b4fa7dc216046798d313db2e45feb49';
@@ -119,19 +121,27 @@ var instagram = function() {
 
           for(var i = 0; i<data.data.length;i++){
             console.log(data.data[i].images.low_resolution.url)
-          }
-          $(".instagram").append('<div class="panel panel-primary">'+
-              '<div class="panel-heading">'+
-                '<h3 class="panel-title">Panel primary</h3>'+
-              '</div>'+
-              '<div class="panel-body">'+
-                'Panel content'+
-              '</div>'+
-            '</div> '
-           );
-           $(".instagram").text("Oi");
-          
+         
+
+          div1 = document.createElement("div");
+          div1.className = "panel panel-primary";
+
+          div2 = document.createElement("div");
+          div2.className = "panel-heading";
+
+          h1 = document.createElement("div");
+          h1.textContent = "Panel Primary";
+          h1.className = "panel-title";
+
+          div3 = document.createElement("div");
+          div3.className = "panel-body";
+
+          div2.appendChild(h1);
+          div2.appendChild(div3);
+          div1.appendChild(div2);
+          instagram.appendChild(div1);
         }
+         }
         
       });
     }
