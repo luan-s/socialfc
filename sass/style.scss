@@ -52,8 +52,8 @@ nav{
 
 .instaPhotos{
 	overflow:hidden;
-	width: 100px;
-	height:10px;
+	width: 100px !important;
+	height:100px !important;
 	&:hover{
 		box-shadow: 0 0 10px black;
 	}
