@@ -78,7 +78,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 0");
+console.log("logout 13");
 
 /////////// INSTAGRAM ///////////
 
@@ -120,26 +120,28 @@ var instagram = function() {
           console.log(data);
 
           for(var i = 0; i<data.data.length;i++){
-            console.log(data.data[i].images.low_resolution.url)
-         
+        
+            div1 = document.createElement("div");
+            div1.className = "panel panel-primary";
 
-          div1 = document.createElement("div");
-          div1.className = "panel panel-primary";
+            div2 = document.createElement("div");
+            div2.className = "panel-heading";
 
-          div2 = document.createElement("div");
-          div2.className = "panel-heading";
+            h1 = document.createElement("div");
+            h1.textContent = "Panel Primary";
+            h1.className = "panel-title";
 
-          h1 = document.createElement("div");
-          h1.textContent = "Panel Primary";
-          h1.className = "panel-title";
+            div3 = document.createElement("div");
+            div3.className = "panel-body";
 
-          div3 = document.createElement("div");
-          div3.className = "panel-body";
+            img = document.createElement('img');
+            img.className = "instaPhotos";
+            img.src = data.data[i].images.low_resolution.url;
 
-          div2.appendChild(h1);
-          div2.appendChild(div3);
-          div1.appendChild(div2);
-          insta.appendChild(div1);
+            div2.appendChild(h1);
+            div2.appendChild(div3);
+            div1.appendChild(div2);
+            insta.appendChild(div1);
         }
          }
         
