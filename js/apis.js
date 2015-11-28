@@ -81,8 +81,8 @@ function testAPI() {
     for(var i = 0; i<5;i++){
       
       var image = separaId(response.data[i].id);
-      console.log(image.length);
-      
+      console.log(JSON.parse(image).length);
+
       div1 = document.createElement("div");
       div1.className = "panel panel-primary";
 
