@@ -108,6 +108,7 @@ var instagram = function() {
     },
     loadImages: function(userID) {
       console.log(userID);
+      console.log('https://api.instagram.com/v1/users/'+ userID +'/media/recent/?access_token='+ accessToken);
       var getImagesURL = 'https://api.instagram.com/v1/users/'+ userID +'/media/recent/?access_token='+ accessToken;
       $.ajax({
         type: "GET",
