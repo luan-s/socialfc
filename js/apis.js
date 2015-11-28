@@ -68,8 +68,7 @@ function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
  
   FB.api('/me', function(response) {
-    console.log(response);
-    console.log(separaId(response.data[0].id));
+    console.log(JSON,stringify(response));
     console.log('Successful login for: ' + response.name);
     
   });
