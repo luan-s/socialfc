@@ -4,7 +4,7 @@ function httpGet(url) {
   var xmlHttp = new XMLHttpRequest(); 
   xmlHttp.open( "GET", url, false ); // false para síncrono
   xmlHttp.send( null ); 
-  return JSON.parse(xmlHttp.responseText);
+  return xmlHttp.responseText;
 }
 
 
@@ -100,7 +100,7 @@ $('.logout').click(function(){
 });
 
 
-console.log("logout 10");
+console.log("logout 11");
 
 /////////// INSTAGRAM ///////////
 
