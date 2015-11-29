@@ -37,6 +37,8 @@ nav {
     height: auto; }
     .content .social .nav-pills li {
       margin: 0; }
+    .content .social .so-pane {
+      border: 5px solid #cfd8dc; }
   .content .painel-noticias {
     overflow: hidden;
     display: none;
