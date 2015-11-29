@@ -2,14 +2,17 @@ doctype
 html
 	head
 		meta(charset="utf-8")
+		link(rel='icon', type='image/png', href='img/ico.png ')
+
 		title Social FC
 		link(rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css")
 		link(rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/material.min.css")
+		link(rel="stylesheet" type="text/css" href="css/animate.css")
 		link(rel="stylesheet" type="text/css" href="css/style.css")
 	body
 		nav.navbar.navbar-default
 			.container-fluid
-			// Brand and toggle get grouped for better mobile display
+				
 			.navbar-header
          
 		.content.col-xs-12
@@ -17,7 +20,9 @@ html
 				h1 Bem vindo ao Social Fc!
 				p Nome do time:
 				.time.col-xs-4.col-xs-offset-4
-					input(type="text" class="form-control" placeholder="Ex: Corinthians" aria-describedby="basic-addon2")
+					.col-md-10
+						select#sel1.form-control
+
 					button#ir(class="btn btn-default") Ir
 			
 			.jumbotron.social.col-xs-12
@@ -34,23 +39,31 @@ html
 					a(href="javascript:void(0)" class="btn btn-raised btn-info login")#login Logar
 					a(href="javascript:void(0)" class="btn btn-raised btn-info logout")#logout Deslogar
 				.jumbotron.so-pane.twitter.col-xs-8.col-xs-offset-2.hidden Twitter
-
-
-			.painel-noticias.col-xs-12
+			
+			.get-noticias.jumbotron.col-xs-12
+				span Notícias 
+				span#seta.glyphicon.glyphicon-menu-down(aria-hidden='true')
+						
+			animated.bounceInLeft.wow.painel-noticias.col-xs-12
 				.pane.col-xs-4
 					.jumbotron.noticias.n1
-						h1 Globo
+						h2 Globo Esporte
 				.pane.col-xs-4
 					.jumbotron.noticias.n2
-						h1 UOL
+						h2 UOL
 				.pane.col-xs-4
 					.jumbotron.noticias.n3
-						h1 Outro
+						h3 Fox Esporte
 
 		script(src="bower_components/instafeed.js/instafeed.min.js")
 		script(src="bower_components/abdmob/x2js/xml2json.min.js")
 		script(src="bower_components/jquery/dist/jquery.min.js")
 		script(src="bower_components/bootstrap/dist/js/bootstrap.min.js")
 		script(src="bower_components/bootstrap-material-design/dist/js/material.min.js")
+		script(src="js/wow.min.js")
+		script(src="js/data.js")
 		script(src="js/script.js")
-		script(src="js/apis.js")
+		///script(src="js/apis.js")
+
+		script.
+			new WOW().init();

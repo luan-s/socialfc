@@ -2,15 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="img/ico.png ">
     <title>Social FC</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/material.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <nav class="navbar navbar-default">
       <div class="container-fluid"></div>
-      <!-- Brand and toggle get grouped for better mobile display-->
       <div class="navbar-header"></div>
     </nav>
     <div class="content col-xs-12">
@@ -18,7 +19,9 @@
         <h1>Bem vindo ao Social Fc!</h1>
         <p>Nome do time:</p>
         <div class="time col-xs-4 col-xs-offset-4">
-          <input type="text" placeholder="Ex: Corinthians" aria-describedby="basic-addon2" class="form-control">
+          <div class="col-md-10">
+            <select id="sel1" class="form-control"></select>
+          </div>
           <button id="ir" class="btn btn-default">Ir</button>
         </div>
       </div>
@@ -33,30 +36,34 @@
         <div class="jumbotron so-pane facebook col-xs-8 col-xs-offset-2 hidden"> <a href="javascript:void(0)" id="login" class="btn btn-raised btn-info login">Logar</a><a href="javascript:void(0)" id="logout" class="btn btn-raised btn-info logout">Deslogar</a></div>
         <div class="jumbotron so-pane twitter col-xs-8 col-xs-offset-2 hidden">Twitter</div>
       </div>
-      <div class="painel-noticias col-xs-12">
+      <div class="get-noticias jumbotron col-xs-12"><span>Notícias </span><span id="seta" aria-hidden="true" class="glyphicon glyphicon-menu-down"></span></div>
+      <animated class="bounceInLeft wow painel-noticias col-xs-12">
         <div class="pane col-xs-4">
           <div class="jumbotron noticias n1">
-            <h1>Globo</h1>
+            <h2>Globo Esporte</h2>
           </div>
         </div>
         <div class="pane col-xs-4">
           <div class="jumbotron noticias n2">
-            <h1>UOL</h1>
+            <h2>UOL</h2>
           </div>
         </div>
         <div class="pane col-xs-4">
           <div class="jumbotron noticias n3">
-            <h1>Outro</h1>
+            <h3>Fox Esporte</h3>
           </div>
         </div>
-      </div>
+      </animated>
     </div>
     <script src="bower_components/instafeed.js/instafeed.min.js"></script>
     <script src="bower_components/abdmob/x2js/xml2json.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/apis.js"></script>
+    <!--/script(src="js/apis.js")-->
+    <script>new WOW().init();</script>
   </body>
 </html>
