@@ -1,11 +1,17 @@
-var urlGlobo = 'http://globoesporte.globo.com/servico/semantica/editorias/plantao/futebol/times/corinthians/feed.rss';
-var urlFox = 'http://www.foxsports.com.br/feeds/times/?teamName=corinthians';
-var urlUol = 'http://esporte.uol.com.br/futebol/clubes/corinthians.xml';
+var urlGlobo = 'http://globoesporte.globo.com/servico/semantica/editorias/plantao/futebol/times/';
+var urlFox = 'http://www.foxsports.com.br/feeds/times/?teamName=';
+var urlUol = 'http://esporte.uol.com.br/futebol/clubes/';
+
+var posfixoGlobo = '/feed.rss';
+var posfixoUol = '.xml';
+var posfixoFox = '';
 
 
 for(i in times){
 	$('<option id="mov0'+i.toString()+'">'+times[i]+'</option>').appendTo("#sel1");
 }
+
+
 
 var corTime;
 /*
@@ -37,7 +43,6 @@ function pegaNoticias(n,url){
 			success: function (xml) {
 				values = xml.responseData.feed.entries;
 				exibeNoticias(values,n);
-				
 			}
 		});
 	});
@@ -53,15 +58,7 @@ $(".nav-pills > li").click(function(){
 	$('.'+$(this).attr('data-s')).removeClass("hidden");
 });	
 
-$("#ir").click(function(){
-	$('.pesquisa').css("height","auto");
-	$('.pesquisa').css("padding","0");
-	$('.pesquisa').css("margin-top","-350px");
-	$('.pesquisa').css("background-color","#009688");
-	$('nav').css("opacity","1");
-	$('.social').css("display","block");
-	$('.get-noticias').css("display","block");
-});
+
 
 $('#seta').click(function(){
 	if($('#seta').hasClass("glyphicon glyphicon-menu-up")){
@@ -142,10 +139,27 @@ function exibeNoticiasUol(obj){
 	}*/
 }
 
-pegaNoticias(1,urlGlobo);
-pegaNoticias(2,urlUol);
-pegaNoticias(3,urlFox);
 
 
 
 
+$("#ir").click(function(){
+	$( "select option:selected" ).each(function() {
+	    n = $(this).index();
+		pegaNoticias(1,urlGlobo+timesGlobo[n]+posfixoGlobo);
+		pegaNoticias(2,urlUol+timesUol[n]+posfixoUol);
+		pegaNoticias(3,urlFox+timesFox[n]+posfixoFox);
+    });
+
+    getInstagram(jsonT[n][1]);
+    getFacebook(jsonT[n][0]);
+
+
+	$('.pesquisa').css("height","auto");
+	$('.pesquisa').css("padding","0");
+	$('.pesquisa').css("margin-top","-350px");
+	$('.pesquisa').css("background-color","#009688");
+	$('nav').css("opacity","1");
+	$('.social').css("display","block");
+	$('.get-noticias').css("display","block");
+});
