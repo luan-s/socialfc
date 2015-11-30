@@ -92,7 +92,7 @@ function getFacebook(faceId){
     function (response) {
       
 
-      for(var i = 0; i<5;i++){
+      for(var i = 0; i<3;i++){
         
         var image = separaId(response.data[i].id);
 
@@ -103,7 +103,7 @@ function getFacebook(faceId){
         div2.className = "panel-heading";
 
         h1 = document.createElement("h1");
-        h1.textContent = "♥ ";
+        h1.textContent = response.data[i].message;
         h1.className = "panel-title";
 
         div3 = document.createElement("div");
