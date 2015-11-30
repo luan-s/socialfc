@@ -102,7 +102,7 @@ function getFacebook(faceId){
         div2 = document.createElement("div");
         div2.className = "panel-heading";
 
-        h1 = document.createElement("h1");
+        h1 = document.createElement("p");
         h1.textContent = response.data[i].message;
         h1.className = "panel-title";
 
