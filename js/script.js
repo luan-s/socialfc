@@ -41,6 +41,7 @@ function pegaNoticias(n,url){
 				console.log('Erro ao ler o feed: ' + erro);
 			},
 			success: function (xml) {
+				console.log(xml);
 				values = xml.responseData.feed.entries;
 				exibeNoticias(values,n);
 			}
@@ -50,7 +51,6 @@ function pegaNoticias(n,url){
 
 
 
-times = ["Atletico Mineiro","Avai","Chapecoense","Corinthians","Coritiba","Cruzeiro","Figueirense","Flamengo","Fluminense","Goiais","Gremio","Internacional","joinville","Palmeiras","Santos","Sao Paulo","Sport", "Vasco"]
 $(".nav-pills > li").click(function(){
 	$(".nav-pills > li").removeClass("active");
 	$(this).addClass("active");
@@ -151,15 +151,19 @@ $("#ir").click(function(){
 		pegaNoticias(3,urlFox+timesFox[n]+posfixoFox);
     });
 
+    $(".social").css("display","block");
+    $(".pesquisa").css("top","0%");
+    $(".pesquisa").css("transform","translateY(0%)");
+    $(".pesquisa").css("height","115px");
+    $(".pesquisa").css("padding-top","2px");
+    $(".pesquisa").css("position","fixed");
+    $(".get-noticias").css("display","");
+    $("body").css("margin-top","115px");
+    $(".time").hide();
+    $(".pesquisa > p").hide();
+    $(".pesquisa > h1").text(times[n]);
     getInstagram(jsonT[n][1]);
     getFacebook(jsonT[n][0]);
-
-
-	$('.pesquisa').css("height","auto");
-	$('.pesquisa').css("padding","0");
-	$('.pesquisa').css("margin-top","-350px");
-	$('.pesquisa').css("background-color","#009688");
-	$('nav').css("opacity","1");
-	$('.social').css("display","block");
-	$('.get-noticias').css("display","block");
+	
 });
+

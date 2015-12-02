@@ -194,24 +194,24 @@ function getInstagram(usuario){
           success: function(data) {
             console.log(data);
 
-            for(var i = 0; i<3;i++){
+            for(var i = 0; i<4;i++){
           
               div1 = document.createElement("div");
-              div1.className = "panel panel-primary";
+              div1.className = "panel panel-primary col-xs-6 ";
 
               div2 = document.createElement("div");
-              div2.className = "panel-heading";
+              div2.className = "panel-s ";
 
               h1 = document.createElement("div");
               h1.textContent = "♥ " + data.data[i].likes.count.toString();
               h1.className = "panel-title";
 
               div3 = document.createElement("div");
-              div3.className = "panel-body";
+              div3.className = "panel-body animated bounceInUp wow";
 
               img = document.createElement('img');
               img.className = "instaPhotos";
-              img.src = data.data[i].images.low_resolution.url;
+              img.src = data.data[i].images.standard_resolution.url;
 
               div2.appendChild(h1);
               div2.appendChild(div3).appendChild(img);
@@ -232,33 +232,6 @@ function getInstagram(usuario){
   });
 }
 
-////////////TWITTER//////////////
 
-
-
-window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
- 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
- 
-  return t;
-}(document, "script", "twitter-wjs"));
-
-twttr.widgets.createTimeline(
-  "600720083413962752",
-  document.querySelector(".twitter"),
-  {
-    screenName: "fabric"
-  }
-);
 
 

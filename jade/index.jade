@@ -10,35 +10,25 @@ html
 		link(rel="stylesheet" type="text/css" href="css/animate.css")
 		link(rel="stylesheet" type="text/css" href="css/style.css")
 	body
-		nav.navbar.navbar-default
+		nav.navbar.navbar-default.hidden
 			.container-fluid
-				
 			.navbar-header
          
 		.content.col-xs-12
-			.jumbotron.pesquisa.col-md-12.col-xs-12
-				h1 Bem vindo ao Social Fc!
-				p Nome do time:
-				.time.col-xs-4.col-xs-offset-4
+			.jumbotron.pesquisa.col-md-12.col-xs-12.border
+				h1.animated.bounceInLeft.wow Bem vindo ao Social Fc!
+				.time.col-xs-4.col-xs-offset-4.animated.bounceInLeft.wow
 					.col-md-10
 						select#sel1.form-control
-
-					button#ir(class="btn btn-default") Ir
+						button#ir(class="btn btn-default") Ir
 			
-			.jumbotron.social.col-xs-12
-				ul.nav.nav-pills.col-xs-12
-					li.col-xs-4.active(role='presentation' data-s="instagram")
-						a(href='#') Instagram
-					li.col-xs-4(role='presentation'  data-s="facebook")
-						a(href='#') Facebook
-					li.col-xs-4(role='presentation' data-s="twitter")
-						a(href='#') Twitter
+			.jumbotron.social.col-xs-12.animated.bounceInUp.wow
+				
 				p Nome do time:
-				.jumbotron.so-pane.instagram.col-xs-4 Instagram
-				.jumbotron.so-pane.facebook.col-xs-4
-					a(href="javascript:void(0)" class="btn btn-raised btn-info login")#login Logar
-					a(href="javascript:void(0)" class="btn btn-raised btn-info logout")#logout Deslogar
-				.jumbotron.so-pane.twitter.col-xs-4 Twitter
+				.jumbotron.so-pane.instagram.col-xs-6
+				.jumbotron.so-pane.facebook.col-xs-6
+					a(href="javascript:void(0)" class="btn btn-raised btn-info login col-xs-5")#login Logar
+					a(href="javascript:void(0)" class="btn btn-raised btn-info logout col-xs-5")#logout Deslogar
 			
 			.get-noticias.jumbotron.col-xs-12
 				span Notícias 
@@ -56,10 +46,11 @@ html
 						h3 Fox Esporte
 
 		script(src="bower_components/instafeed.js/instafeed.min.js")
-		script(src="bower_components/abdmob/x2js/xml2json.min.js")
+		script(src="bower_components/abdmob/x2js/xml2json.js")
 		script(src="bower_components/jquery/dist/jquery.min.js")
 		script(src="bower_components/bootstrap/dist/js/bootstrap.min.js")
 		script(src="bower_components/bootstrap-material-design/dist/js/material.min.js")
+		script(src="js/xml2js.js")
 		script(src="js/wow.min.js")
 		script(src="js/data.js")
 		script(src="js/script.js")

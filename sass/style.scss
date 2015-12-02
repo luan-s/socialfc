@@ -5,14 +5,22 @@
 
 }
 
+///VARS
+
+	$back1-color: #f5f5f5;
+	$element1-color: #8BC34A;
+	$element2-color: #4CAF50;
+
+
 .border{
 	border: 1px solid black;
 }
 
 body{
-	background-image: url("../img/fundo.jpg");
+	background-color: $back1-color;
 	width: 100%;
 	height: 100vh;
+	padding:0;
 }
 
 nav{
@@ -22,39 +30,51 @@ nav{
 }
 
 #sel1{
-	text-indent: 5px;
 }
 .content{
-
 	margin: 0 0 0 0 !important;
 	transition: all 0.3 linear;
-	margin-top:px;
 	text-align: center;
+	height: 100vh;
+	padding: 0;
 	.pesquisa{
+		z-index: 3 !important;
+		height: 500px;
+		position:relative;
+		top:50%;
+		transform:translateY(-50%);
+		color:white;
+		background: url("../img/fundo.jpg") center;
+		margin:0;
+		margin-bottom:80px;
+		padding-top: 110px;
 		.time{
-			input{
-				transition: all 0.3s linear;
-				padding-left:20px;
+			#ir{
+				color:white;
+				border: 1px solid white;
 			}
 		}
 		transition: all 0.3s linear;
-		padding: 150px 0;
-		height: 85vh;
-		h1{
-		}
+		
 	}
 	.social{
-		background-color: #CFD8DC;
+		background-color: $back1-color;
 		display:none;
 		height: auto;
 		.nav-pills{
 			li{
 				margin:0;
+				background-color: $element2-color;
+
 			}
 		}
 
 		.so-pane{
-			border: 5px solid #cfd8dc;
+			border: 5px solid $back1-color;
+			background-color: $element1-color;
+			border-radius: 10px;
+			background: linear-gradient($element1-color,darken($element1-color,11%));
+
 		}
 	}
 	.noticias{
@@ -65,7 +85,6 @@ nav{
 		display:none;
 		transition: all 0.4s linear;
 		height: 0px;
-
 	}
 
 	.get-noticias{
@@ -85,12 +104,19 @@ nav{
 
 .pane{
 	padding: 0 20px;
+    box-shadow: 0 0 5px black !important;
+
 }
 
 .instaPhotos{
 	overflow:hidden;
-	width: 250px !important;
+	width: 95% !important;
 	height:auto !important;
+	box-shadow: 0 0 5px black !important;
+	transition: all 0.05s linear;
+	&:hover{
+		transform: scale(1.1,1.1);
+	}
 }
 
 .facePhotos{
@@ -103,5 +129,15 @@ nav{
 	overflow: hidden;
     text-overflow: ellipsis;
     white-space: wrap;
+}
+
+.panel-s{
+	background-color: $back1-color;
+	width: auto;
+	border-radius: 10px ;
+}
+
+.panel{
+	background: rgba(0, 0, 0, 0);
 }
 
