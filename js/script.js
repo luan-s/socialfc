@@ -155,7 +155,7 @@ $("#ir").click(function(){
     getInstagram(jsonT[n][1]);
     getFacebook(jsonT[n][0]);
 
-face = document.querySelector(".facebook");
+/*face = document.querySelector(".facebook");
 
         div1 = document.createElement("div");
         div1.className = "panel panel-primary";
@@ -178,7 +178,7 @@ face = document.querySelector(".facebook");
         div2.appendChild(h1);
         div2.appendChild(div3).appendChild(img);
         div1.appendChild(div2);
-        face.appendChild(div1);
+        face.appendChild(div1);*/
 	
 });
 
