@@ -112,18 +112,17 @@ function getFacebook(faceId){
         img = document.createElement('img');
         img.className = "facePhotos";
         img.src = image;
-        
 
         div2.appendChild(h1);
         div2.appendChild(div3).appendChild(img);
         div1.appendChild(div2);
         face.appendChild(div1);
 
+        $('.facePhotos').error(function(){
+           $('.facePhotos').attr('src','../img/ico.png');
+         });
+
       }
-
-      
-
-
 
       if (response && !response.error) {
         console.log(response);
