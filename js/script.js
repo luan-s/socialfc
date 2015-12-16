@@ -64,24 +64,7 @@ $(".nav-pills > li").click(function(){
 
 
 
-$('#seta').click(function(){
-	if($('#seta').hasClass("glyphicon glyphicon-menu-up")){
-		$('#seta').removeClass("glyphicon glyphicon-menu-up");
-		$('#seta').addClass("glyphicon glyphicon-menu-down");
-		//$(".painel-noticias").css("display","none");
-		$(".painel-noticias").css("height","0px");
-		$('#seta').show();
-
-	}
-	else{
-		$('#seta').removeClass("glyphicon glyphicon-menu-down");
-		$('#seta').addClass("glyphicon glyphicon-menu-up");
-		$(".painel-noticias").css("display","block");
-		//$('.get-noticias > h2').hide();
-		$(".painel-noticias").css("height","680px");
-	}
-
-});
+		
 
 
 function exibeNoticias(obj,n){
@@ -164,6 +147,10 @@ $("#ir").click(function(){
     $(".pesquisa > p").hide();
     $(".pesquisa > h1").text(times[n]);
     $(".pesquisa").addClass("pesquisa-nav");
+    $(".painel-noticias").css("display","block");
+    $(".noticias").css("display","block");
+    $(".noticias").addClass("animated bounceInUp wow");
+	$(".painel-noticias").css("height","680px");
 
     getInstagram(jsonT[n][1]);
     getFacebook(jsonT[n][0]);

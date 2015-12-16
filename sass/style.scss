@@ -80,12 +80,13 @@ nav{
 		}
 	}
 	.noticias{
+		display:none;
 	}
 
 	.painel-noticias{
 		overflow:hidden;
-		display:none;
 		transition: all 0.4s linear;
+		display:none;
 		height: 0px;
 	}
 
@@ -106,7 +107,7 @@ nav{
 
 .pane{
 	padding: 0 20px;
-    box-shadow: 0 0 5px black !important;
+    box-shadow: 0 0 0px black !important;
 
 }
 

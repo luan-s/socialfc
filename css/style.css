@@ -52,10 +52,12 @@ nav {
       background: linear-gradient(#8BC34A, #6ea035);
       overflow: auto;
       height: 500px; }
+  .content .noticias {
+    display: none; }
   .content .painel-noticias {
     overflow: hidden;
-    display: none;
     transition: all 0.4s linear;
+    display: none;
     height: 0px; }
   .content .get-noticias {
     transition: all 0.3s linear;
@@ -67,7 +69,7 @@ nav {
 
 .pane {
   padding: 0 20px;
-  box-shadow: 0 0 5px black !important; }
+  box-shadow: 0 0 0px black !important; }
 
 .instaPhotos, .facePhotos {
   overflow: hidden;
