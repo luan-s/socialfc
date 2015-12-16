@@ -201,6 +201,9 @@ $("#voltar").click(function(){
     $(".instagram").empty();
     $(".facebook").empty();
 
+     $(".painel-noticias").css("display","none");
+    $(".noticias").css("display","none");
+
 	
 });
 
