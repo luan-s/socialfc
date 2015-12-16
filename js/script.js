@@ -187,6 +187,7 @@ $("#voltar").click(function(){
     $(".pesquisa > h1").text("Bem vindo ao Social Fc!");
     $(".pesquisa").removeClass("pesquisa-nav");
     $(".instagram").empty();
+    $(".facebook").empty();
 
 	
 });
