@@ -11,8 +11,6 @@ for(i in times){
 	$('<option id="mov0'+i.toString()+'">'+times[i]+'</option>').appendTo("#sel1");
 }
 
-
-
 var corTime;
 /*
 	var i = 0;
@@ -29,6 +27,8 @@ var corTime;
 	}); 
 	feed.run(); 
 */
+
+
 function pegaNoticias(n,url){
 	$(function () {
 		var urlRss = url;
@@ -48,6 +48,10 @@ function pegaNoticias(n,url){
 		});
 	});
 }
+
+
+
+
 
 
 
@@ -140,9 +144,6 @@ function exibeNoticiasUol(obj){
 }
 
 
-
-
-
 $("#ir").click(function(){
 	$( "select option:selected" ).each(function() {
 	    n = $(this).index();
@@ -154,16 +155,56 @@ $("#ir").click(function(){
     $(".social").css("display","block");
     $(".pesquisa").css("top","0%");
     $(".pesquisa").css("transform","translateY(0%)");
-    $(".pesquisa").css("height","115px");
-    $(".pesquisa").css("padding-top","2px");
+    $(".pesquisa").css("height","90px");
+    $(".pesquisa").css("padding-top","0");
     $(".pesquisa").css("position","fixed");
-    $(".get-noticias").css("display","");
+    $(".get-noticias").css("display","block");
     $("body").css("margin-top","115px");
     $(".time").hide();
     $(".pesquisa > p").hide();
     $(".pesquisa > h1").text(times[n]);
+    $(".pesquisa").addClass("pesquisa-nav");
+
     getInstagram(jsonT[n][1]);
     getFacebook(jsonT[n][0]);
 	
+});
+
+
+
+$("#voltar").click(function(){
+	
+    $(".social").css("display","none");
+    $(".pesquisa").css("top","50%");
+    $(".pesquisa").css("transform","translateY(-50%)");
+    $(".pesquisa").css("height","500px");
+    $(".pesquisa").css("padding-top","110px");
+    $(".pesquisa").css("position","relative");
+    $(".get-noticias").css("display","none");
+    $("body").css("margin-top","0");
+    $(".time").show();
+    $(".pesquisa > p").show();
+    $(".pesquisa > h1").text("Bem vindo ao Social Fc!");
+    $(".pesquisa").removeClass("pesquisa-nav");
+    $(".instagram").empty();
+
+	
+});
+
+
+
+	var lastScroll = 0;
+$(window).scroll(function(){
+
+	var scrollTop = $(window).scrollTop();
+
+	if (lastScroll <= scrollTop) {
+			$('.pesquisa-nav').css('transform','translateY(-100%)');
+		}else{
+			$('.pesquisa-nav').css('transform','translateY(0%)');
+		}
+
+
+	lastScroll = scrollTop;
 });
 
