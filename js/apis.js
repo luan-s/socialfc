@@ -194,7 +194,7 @@ function getInstagram(usuario){
           success: function(data) {
             console.log(data);
 
-            for(var i = 0; i<4;i++){
+            for(var i = 0; i<8;i++){
           
               div1 = document.createElement("div");
               div1.className = "panel panel-primary col-xs-6 ";

@@ -74,6 +74,8 @@ nav{
 			background-color: $element1-color;
 			border-radius: 10px;
 			background: linear-gradient($element1-color,darken($element1-color,11%));
+			overflow: auto;
+			height: 500px;
 
 		}
 	}
@@ -121,6 +123,8 @@ nav{
 
 .facePhotos{
 	@extend .instaPhotos;
+	width: 40% !important;
+	height:auto !important;
 }
 
 .cardNot{
@@ -142,6 +146,15 @@ nav{
 }
 
 .panel-title{
-	font-size: 10px;
+	font-size: 15px !important;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
 }
 
+.panel-heading{
+	color:black !important;
+	background-color: $back1-color !important;
+	width: auto;
+	border-radius: 10px ;
+}

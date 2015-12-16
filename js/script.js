@@ -167,6 +167,31 @@ $("#ir").click(function(){
 
     getInstagram(jsonT[n][1]);
     getFacebook(jsonT[n][0]);
+
+face = document.querySelector(".facebook");
+
+        div1 = document.createElement("div");
+        div1.className = "panel panel-primary";
+
+        div2 = document.createElement("div");
+        div2.className = "panel-heading";
+
+        h1 = document.createElement("p");
+        h1.textContent = "aksjd akd ka dak das dabs dabs dab sda sda skdjbaksjdbkasbdkabdka bdka sdka sd askdn akd akd kans dans dakn sdka sdkan sdka sdka dka dka dka sdas dk";
+        h1.className = "panel-title col-xs-12";
+
+        div3 = document.createElement("div");
+        div3.className = "panel-body";
+
+        img = document.createElement('img');
+        img.className = "facePhotos";
+        img.src = "img/ico.png";
+        
+
+        div2.appendChild(h1);
+        div2.appendChild(div3).appendChild(img);
+        div1.appendChild(div2);
+        face.appendChild(div1);
 	
 });
 
