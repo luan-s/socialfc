@@ -119,7 +119,7 @@ function getFacebook(faceId){
         face.appendChild(div1);
 
         $('.photo'+i.toString()).error(function(){
-           $('.facePhotos').hide();
+           $('.photo'+i.toString()).hide();
         });
 
       }
