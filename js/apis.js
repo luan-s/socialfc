@@ -110,7 +110,7 @@ function getFacebook(faceId){
         div3.className = "panel-body";
 
         img = document.createElement('img');
-        img.className = "facePhotos";
+        img.className = "facePhotos photo" +i.toString();
         img.src = image;
 
         div2.appendChild(h1);
@@ -118,9 +118,9 @@ function getFacebook(faceId){
         div1.appendChild(div2);
         face.appendChild(div1);
 
-        $('.facePhotos').error(function(){
-           $('.facePhotos').attr('src','https://www.jobcast.net/wp-content/uploads/2011/07/facebook_logo-300x300.png');
-         });
+        $('.photo'+i.toString()).error(function(){
+           $('.facePhotos').hide();
+        });
 
       }
 
