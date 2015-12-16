@@ -119,7 +119,7 @@ function getFacebook(faceId){
         face.appendChild(div1);
 
         $('.facePhotos').error(function(){
-           $('.facePhotos').attr('src','../img/ico.png');
+           $('.facePhotos').attr('src','https://www.jobcast.net/wp-content/uploads/2011/07/facebook_logo-300x300.png');
          });
 
       }
