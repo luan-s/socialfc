@@ -102,7 +102,7 @@ function getFacebook(faceId){
         div1.className = "panel panel-primary";
 
         div2 = document.createElement("div");
-        div2.className = "panel-heading";
+        div2.className = "panel-heading animated bounceInLeft wow";
 
         h1 = document.createElement("p");
         h1.textContent = response.data[i].message;
@@ -214,8 +214,14 @@ function getInstagram(usuario){
               img.className = "instaPhotos";
               img.src = data.data[i].images.standard_resolution.url;
 
+              a = document.createElement("a");
+              a.href = data.data[i].link;
+              a.target = "_blank";
+
+              a.appendChild(img);
+
               div2.appendChild(h1);
-              div2.appendChild(div3).appendChild(img);
+              div2.appendChild(div3).appendChild(a);
               div1.appendChild(div2);
               insta.appendChild(div1);
 

@@ -55,10 +55,8 @@ nav {
   .content .noticias {
     display: none; }
   .content .painel-noticias {
-    overflow: hidden;
     transition: all 0.4s linear;
-    display: none;
-    height: 0px; }
+    display: none; }
   .content .get-noticias {
     transition: all 0.3s linear;
     text-align: center;
