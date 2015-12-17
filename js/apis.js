@@ -120,11 +120,18 @@ function getFacebook(faceId){
         div1.appendChild(div2);
         face.appendChild(div1);
 
-        $('.photo'+i.toString()).load(function(){
-           $('.photo'+i.toString()).hide();
-        });
-
+        
       }
+
+      setTimeout(function(){
+        for(var i = 0; i<10;i++){
+          $('.photo'+i.toString()).error(function(){
+             $('.photo'+i.toString()).hide();
+          });
+        }
+      },1000);
+      
+
 
       if (response && !response.error) {
         //console.log(response);
