@@ -102,7 +102,7 @@ function getFacebook(faceId){
         div1.className = "panel panel-primary";
 
         div2 = document.createElement("div");
-        div2.className = "panel-heading animated bounceInLeft wow";
+        div2.className = "panel-heading animated bounceInUp wow";
 
         h1 = document.createElement("p");
         h1.textContent = response.data[i].message;
@@ -198,7 +198,7 @@ function getInstagram(usuario){
             for(var i = 0; i<10;i++){
           
               div1 = document.createElement("div");
-              div1.className = "panel panel-primary col-xs-6 ";
+              div1.className = "panel panel-primary col-xs-6 animated bounceInUp wow ";
 
               div2 = document.createElement("div");
               div2.className = "panel-s ";
@@ -208,7 +208,7 @@ function getInstagram(usuario){
               h1.className = "panel-title";
 
               div3 = document.createElement("div");
-              div3.className = "panel-body animated bounceInUp wow";
+              div3.className = "panel-body ";
 
               img = document.createElement('img');
               img.className = "instaPhotos";
