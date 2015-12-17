@@ -126,7 +126,7 @@ function getFacebook(faceId){
       setTimeout(function(){
         for(var i = 0; i<10;i++){
           $('.photo'+i.toString()).error(function(){
-             $('.photo'+i.toString()).hide();
+             $('.photo0'+i).hide();
           });
         }
       },1000);
