@@ -114,7 +114,7 @@ function getFacebook(faceId){
        /* img = document.createElement('img');
         img.className = "facePhotos photo" +i.toString();
         img.src = image;
-*/
+        */
         div2.appendChild(h1);
         div2.appendChild(div3)
         div1.appendChild(div2);
@@ -122,16 +122,6 @@ function getFacebook(faceId){
 
         
       }
-
-      setTimeout(function(){
-        for(var i = 0; i<10;i++){
-          $('.photo'+i.toString()).error(function(){
-             $('.photo0'+i).hide();
-          });
-        }
-      },1000);
-      
-      $('.photo0'+i).hide();
 
       if (response && !response.error) {
         //console.log(response);
@@ -202,7 +192,7 @@ function getInstagram(usuario){
           success: function(data) {
            // console.log(data);
 
-            for(var i = 0; i<10;i++){
+            for(var i = 0; i<20;i++){
           
               div1 = document.createElement("div");
               div1.className = "panel panel-primary col-xs-6 animated bounceInUp wow ";
