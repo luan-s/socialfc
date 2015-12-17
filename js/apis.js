@@ -131,7 +131,7 @@ function getFacebook(faceId){
         }
       },1000);
       
-
+      $('.photo0'+i).hide();
 
       if (response && !response.error) {
         //console.log(response);
