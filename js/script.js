@@ -199,7 +199,6 @@ $("#voltar").click(function(){
     $(".pesquisa > h1").text("Bem vindo ao Social Fc!");
     $(".pesquisa").removeClass("pesquisa-nav");
     $(".instagram").empty();
-    $(".facebook").empty();
 
     $(".painel-noticias").css("display","none");
     $(".noticias").css("display","none");
@@ -209,7 +208,7 @@ $("#voltar").click(function(){
 
 
 
-	var lastScroll = 0;
+var lastScroll = 0;
 $(window).scroll(function(){
 
 	var scrollTop = $(window).scrollTop();

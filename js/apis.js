@@ -38,6 +38,7 @@ function checkImagem(url) {
 
 function getFacebook(faceId){
   face = document.querySelector(".facebook");
+  auxImg = document.querySelector("#aux");
 
 
   function statusChangeCallback(response) {
@@ -90,9 +91,10 @@ function getFacebook(faceId){
     FB.api(
     "/"+faceId+"/posts",
     function (response) {
-      
 
-      for(var i = 0; i<3;i++){
+      auxImg.src = "Luan bolado.com";
+
+      for(var i = 0; i<10;i++){
         
         var image = separaId(response.data[i].id);
 
@@ -193,7 +195,7 @@ function getInstagram(usuario){
           success: function(data) {
             console.log(data);
 
-            for(var i = 0; i<8;i++){
+            for(var i = 0; i<10;i++){
           
               div1 = document.createElement("div");
               div1.className = "panel panel-primary col-xs-6 ";
