@@ -92,7 +92,7 @@ function getFacebook(faceId){
     "/"+faceId+"/posts",
     function (response) {
 
-      for(var i = 0; i<response.data.length;i++){
+      for(var i = 0; i<20;i++){
         
         var image = separaId(response.data[i].id);
 
@@ -190,7 +190,7 @@ function getInstagram(usuario){
           success: function(data) {
            // console.log(data);
 
-            for(var i = 0; i<data.data.length;i++){
+            for(var i = 0; i<20;i++){
           
               div1 = document.createElement("div");
               div1.className = "panel panel-primary col-xs-6 animated bounceInUp wow ";
