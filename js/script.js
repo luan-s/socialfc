@@ -12,21 +12,6 @@ for(i in times){
 }
 
 var corTime;
-/*
-	var i = 0;
-	setInterval(function(){
-		$(".time > input").attr("placeholder","Ex: "+times[i++]);
-		if(i==times.length)i = 0;
-	}, 3000);
-
-
-	var feed = new Instafeed ({ 
-	    get :  'tagged' , 
-	    tagName :  'awesome' , 
-	    clientId : '07fb82d2fea84e99bbe6bf0d1b3c7603',
-	}); 
-	feed.run(); 
-*/
 
 
 function pegaNoticias(n,url){
@@ -48,12 +33,6 @@ function pegaNoticias(n,url){
 		});
 	});
 }
-
-
-
-
-
-
 
 $(".nav-pills > li").click(function(){
 	$(".nav-pills > li").removeClass("active");
@@ -101,27 +80,8 @@ function exibeNoticias(obj,n){
 }
 
 function exibeNoticiasUol(obj){
-	//console.log(obj);
 	uol = document.querySelector(".n2");
-	/*for(var i = 0; i<5;i++){
-
-		div = document.createElement("div");
-		div.className = "alert alert-dismissible alert-danger";
-
-		strong = document.createElement("strong");
-
-		a = document.createElement("a");
-		a.textContent = obj[i].title;
-		a.href = obj[i].link;
-		a.target = "_blank";
-		a.className = "alert-link";
-
-		div.appendChild(strong);
-		div.appendChild(a);
-		uol.appendChild(div);
-	}*/
 }
-
 
 $("#ir").click(function(){
 	$( "select option:selected" ).each(function() {
@@ -151,59 +111,11 @@ $("#ir").click(function(){
     getInstagram(jsonT[n][1]);
     getFacebook(jsonT[n][0]);
 
-/*face = document.querySelector(".facebook");
-
-        div1 = document.createElement("div");
-        div1.className = "panel panel-primary";
-
-        div2 = document.createElement("div");
-        div2.className = "panel-heading";
-
-        h1 = document.createElement("p");
-        h1.textContent = "aksjd akd ka dak das dabs dabs dab sda sda skdjbaksjdbkasbdkabdka bdka sdka sd askdn akd akd kans dans dakn sdka sdkan sdka sdka dka dka dka sdas dk";
-        h1.className = "panel-title col-xs-12";
-
-        div3 = document.createElement("div");
-        div3.className = "panel-body";
-
-        img = document.createElement('img');
-        img.className = "facePhotos";
-        img.src = "img/ico.png";
-        
-
-        div2.appendChild(h1);
-        div2.appendChild(div3).appendChild(img);
-        div1.appendChild(div2);
-        face.appendChild(div1);*/
-	
 });
-
-
 
 $("#voltar").click(function(){
 	window.location.reload(true);
-   /* $(".social").css("display","none");
-    $(".pesquisa").css("top","50%");
-    $(".pesquisa").css("transform","translateY(-50%)");
-    $(".pesquisa").css("height","500px");
-    $(".pesquisa").css("padding-top","110px");
-    $(".pesquisa").css("position","relative");
-    $(".get-noticias").css("display","none");
-    $("body").css("margin-top","0");
-    $(".time").show();
-    $(".pesquisa > p").show();
-    $(".pesquisa > h1").text("Bem vindo ao Social Fc!");
-    $(".pesquisa").removeClass("pesquisa-nav");
-    $(".instagram").empty();
-    $(".facebook").empty();
-
-    $(".painel-noticias").css("display","none");
-    $(".noticias").css("display","none");*/
-
-	
 });
-
-
 
 var lastScroll = 0;
 $(window).scroll(function(){
@@ -215,8 +127,6 @@ $(window).scroll(function(){
 		}else{
 			$('.pesquisa-nav').css('transform','translateY(0%)');
 		}
-
-
 	lastScroll = scrollTop;
 });
 
