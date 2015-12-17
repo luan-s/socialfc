@@ -92,8 +92,6 @@ function getFacebook(faceId){
     "/"+faceId+"/posts",
     function (response) {
 
-      auxImg.src = "Luan bolado.com";
-
       for(var i = 0; i<10;i++){
         
         var image = separaId(response.data[i].id);
