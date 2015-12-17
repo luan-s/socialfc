@@ -38,10 +38,10 @@ function pegaNoticias(n,url){
 			dataType: 'json',
 			error: function (xhr) {
 				var erro = xhr.responseText;
-				console.log('Erro ao ler o feed: ' + erro);
+				//console.log('Erro ao ler o feed: ' + erro);
 			},
 			success: function (xml) {
-				console.log(xml);
+				//console.log(xml);
 				values = xml.responseData.feed.entries;
 				exibeNoticias(values,n);
 			}
@@ -64,7 +64,7 @@ $(".nav-pills > li").click(function(){
 
 
 function exibeNoticias(obj,n){
-	console.log(obj);
+	//console.log(obj);
 	var page, color;
 	if(n==1){
 		page = document.querySelector(".n1");
@@ -101,7 +101,7 @@ function exibeNoticias(obj,n){
 }
 
 function exibeNoticiasUol(obj){
-	console.log(obj);
+	//console.log(obj);
 	uol = document.querySelector(".n2");
 	/*for(var i = 0; i<5;i++){
 

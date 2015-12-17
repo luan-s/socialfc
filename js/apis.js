@@ -26,10 +26,10 @@ function separaId(id){
 function checkImagem(url) {
     var img = '<img src="'+ url +'" />';
     $(img).load(function() {
-      console.log("existe");
+     // console.log("existe");
       return 1;
     }).bind('error', function() {
-      console.log("nao existe");
+     // console.log("nao existe");
       return 0;
     });
    }
@@ -42,8 +42,8 @@ function getFacebook(faceId){
 
 
   function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
+   // console.log('statusChangeCallback');
+    //console.log(response);
     if (response.status === 'connected') {
       $(".login").hide();
       testAPI();
@@ -81,10 +81,10 @@ function getFacebook(faceId){
   function testAPI() {
 
     // Pegar imagem https://graph.facebook.com/%7Bobject-id-from-feed%7D/picture
-    console.log('Welcome!  Fetching your information.... ');
+   // console.log('Welcome!  Fetching your information.... ');
    
     FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
+     // console.log('Successful login for: ' + response.name);
       
     });
 
@@ -120,14 +120,14 @@ function getFacebook(faceId){
         div1.appendChild(div2);
         face.appendChild(div1);
 
-        $('.photo'+i.toString()).error(function(){
+        $('.photo'+i.toString()).load(function(){
            $('.photo'+i.toString()).hide();
         });
 
       }
 
       if (response && !response.error) {
-        console.log(response);
+        //console.log(response);
         /* handle the result */
     }
   });
@@ -152,7 +152,7 @@ function getFacebook(faceId){
   });
 
 
-  console.log("logout 03");
+ // console.log("logout 03");
 }
 
 /////////// INSTAGRAM ///////////
@@ -185,7 +185,7 @@ function getInstagram(usuario){
         });
       },
       loadImages: function(userID) {
-        console.log('https://api.instagram.com/v1/users/'+ userID +'/media/recent/?access_token='+ accessToken);
+       // console.log('https://api.instagram.com/v1/users/'+ userID +'/media/recent/?access_token='+ accessToken);
         var getImagesURL = 'https://api.instagram.com/v1/users/'+ userID +'/media/recent/?access_token='+ accessToken;
         $.ajax({
           type: "GET",
@@ -193,7 +193,7 @@ function getInstagram(usuario){
           cache: false,
           url: getImagesURL,
           success: function(data) {
-            console.log(data);
+           // console.log(data);
 
             for(var i = 0; i<10;i++){
           
