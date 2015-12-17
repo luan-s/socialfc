@@ -63,10 +63,6 @@ $(".nav-pills > li").click(function(){
 });	
 
 
-
-		
-
-
 function exibeNoticias(obj,n){
 	console.log(obj);
 	var page, color;
@@ -185,8 +181,8 @@ $("#ir").click(function(){
 
 
 $("#voltar").click(function(){
-	
-    $(".social").css("display","none");
+	window.location.reload(true);
+   /* $(".social").css("display","none");
     $(".pesquisa").css("top","50%");
     $(".pesquisa").css("transform","translateY(-50%)");
     $(".pesquisa").css("height","500px");
@@ -199,9 +195,10 @@ $("#voltar").click(function(){
     $(".pesquisa > h1").text("Bem vindo ao Social Fc!");
     $(".pesquisa").removeClass("pesquisa-nav");
     $(".instagram").empty();
+    $(".facebook").empty();
 
     $(".painel-noticias").css("display","none");
-    $(".noticias").css("display","none");
+    $(".noticias").css("display","none");*/
 
 	
 });
