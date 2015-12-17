@@ -111,12 +111,12 @@ function getFacebook(faceId){
         div3 = document.createElement("div");
         div3.className = "panel-body";
 
-        img = document.createElement('img');
+       /* img = document.createElement('img');
         img.className = "facePhotos photo" +i.toString();
         img.src = image;
-
+*/
         div2.appendChild(h1);
-        div2.appendChild(div3).appendChild(img);
+        div2.appendChild(div3)
         div1.appendChild(div2);
         face.appendChild(div1);
 
